@@ -14,3 +14,6 @@ class Person():
     def talk(self):
         talk_person = f"Привет, меня зовут {self.firstname} {self.lastname}, мне {self.age} лет."
         return talk_person
+
+person_1 = Person("Иван", "Иванов", "27")
+print(person_1.talk())
