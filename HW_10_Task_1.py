@@ -9,11 +9,15 @@ class Person():
     def __init__(self, firstname, lastname, age):
         self.firstname = firstname
         self.lastname = lastname
-        self.age = age
+        try:
+            self.age = int(age)
+        except:
+            self.age = 0
+            raise ValueError("Возраст должен быть числом")
 
     def talk(self):
         talk_person = f"Привет, меня зовут {self.firstname} {self.lastname}, мне {self.age} лет."
         return talk_person
 
-person_1 = Person("Иван", "Иванов", "27")
+person_1 = Person("Иван", "Иванов", 27)  # Число лет лучше хранить как число. 
 print(person_1.talk())
