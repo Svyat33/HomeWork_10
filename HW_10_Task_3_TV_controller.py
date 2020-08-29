@@ -1,6 +1,8 @@
 
 class TVController():
-
+    def test(self):
+        pass
+    
     def __init__(self):
         self.CHANNELS = ["BBC", "Discovery", "TV1000"]
         self.channel_number = 0
